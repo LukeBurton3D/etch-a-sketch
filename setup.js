@@ -9,8 +9,24 @@ const sliderValue = document.querySelector("#slider-value");
 sliderValue.textContent = `${slider.value} x ${slider.value} (Resolution)`;
 sketchArea.style.width = sketchArea.style.height = `${GRIDSIZE}px`;
 
+const hexCharacters = [0, 1, ,2 ,3 ,4, 5, 6, 7, ,8 ,9, "A", "B", "C", "D", "E", "F"];
+
 function changeBackgroundColor() {
-    this.style.backgroundColor = "black";
+    this.style.backgroundColor = generateRandomColor();
+}
+
+function getCharacter(index) {
+    return hexCharacters[index];
+}
+
+function generateRandomColor() {
+    let hexColor = "#";
+
+    for (let index = 0; index < 6; index++) {
+        const randomPos = Math.floor(Math.random() * hexCharacters.length);
+        hexColor += getCharacter(randomPos);
+    }
+    return hexColor;
 }
 
 function createGridCells(squaresPerSide) {

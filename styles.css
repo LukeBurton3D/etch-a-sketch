@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    margin: 100px auto 0 auto;
+    margin: 10px auto 10px auto;
 }
 
 .cell {
@@ -47,6 +47,7 @@ body {
 
 #slider-container {
     margin: 0 auto;
+    width: 600px;
 }
 
 .slider {
@@ -85,4 +86,9 @@ body {
     height: 25px;
     background: #04AA6D;
     cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px auto;
 }
